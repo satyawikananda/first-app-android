@@ -49,5 +49,6 @@
         android:text="@string/value"
         android:gravity="center"
         android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:id="@+id/tv_result"/>
 </LinearLayout>
