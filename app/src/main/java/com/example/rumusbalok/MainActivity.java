@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText edt_height,edt_length,edt_width;
     private Button btn_calculate;
     private TextView tvResult;
+    private static final String STATE_RESULT = "state_result";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +28,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvResult = findViewById(R.id.tv_result);
 
         btn_calculate.setOnClickListener(this);
+
+        if(savedInstanceState != null){
+            String result = savedInstanceState.getString(STATE_RESULT);
+            tvResult.setText(result);
+        }
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        outState.putString(STATE_RESULT, tvResult.getText().toString());
     }
 
     @Override
@@ -88,4 +99,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return null;
         }
     }
+
+
 }
