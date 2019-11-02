@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             if(length == null){
                 isInvalidDouble = true;
-                edt_length.setError("Inputan ini harus berupa nomor yg valid");
+                edt_length.setError("Inputan inis harus berupa nomor yg valid");
             }
 
             if(width == null){
