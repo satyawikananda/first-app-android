@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             if(!isEmptyFields && !isInvalidDouble){
                 double volume = height * width * length;
-
                 tvResult.setText(String.valueOf(volume));
             }
         }
